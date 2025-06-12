@@ -1,0 +1,86 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("https://i.redd.it/lofi-girl-desk-v0-r471bo6qbs6b1.png?width=2560&format=png&auto=webp&s=948e879170f818f28821a0862cddd3be579c7745");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-de-profil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.nom-utilisateur {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 45px;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.bouton-lien {
+  display: block;
+  width: 95%;
+  max-width: 400px;
+  padding: 18px;
+  margin: 14px 0;
+  background-color: white;
+  color: #18181a;
+  text-decoration: none;
+  border: 1px solid #e5e5ea;
+  border-radius: 18px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+.bouton-lien:hover {
+  transform: scale(1.03);
+}
+
+.container {
+  background-image: url("https://static.actu.fr/uploads/2020/04/chilledcow-jour-400x.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
