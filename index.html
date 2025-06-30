@@ -8,16 +8,24 @@
 </head>
 <body>
 <div class="overlay"></div>
-
 <div class="container">
-<img src="profil.jpg" class="photo-de-profil">
-<div class="nom-utilisateur">@louis.grtn</div>
-
-<a href="https://louisgratien.site/" class="bouton-lien">Mon Portfolio</a>
-<a href="https://www.instagram.com/louis.grtn/?hl=fr" class="bouton-lien">Mon Instagram</a>
-<a href="https://www.linkedin.com/in/louis-gratien-2a254a267/" class="bouton-lien">Mon LinkedIn</a>
-<a href="mailto:louis.gratien@gmail.com" class="bouton-lien">Contact</a>
+  <img id="profile-image" src="profil.jpg" class="photo-de-profil">
+  <div id="username" class="nom-utilisateur"></div>
+  <div id="links"></div>
 </div>
-
+<script>
+fetch('/data').then(r => r.json()).then(data => {
+  document.getElementById('profile-image').src = data.profileImage;
+  document.getElementById('username').textContent = data.username;
+  const linksDiv = document.getElementById('links');
+  data.links.forEach(link => {
+    const a = document.createElement('a');
+    a.href = link.url;
+    a.textContent = link.label;
+    a.className = 'bouton-lien';
+    linksDiv.appendChild(a);
+  });
+});
+</script>
 </body>
 </html>
